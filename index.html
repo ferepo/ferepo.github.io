@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditación Mindfulness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#tecnicas">Técnicas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Descubre el poder de la meditación</h1>
+            <p>Encuentra paz interior y mejora tu bienestar físico y mental.</p>
+        </section>
+
+        <section id="beneficios">
+            <h2>Beneficios de la meditación</h2>
+            <ul>
+                <li>Reduce el estrés</li>
+                <li>Mejora la concentración</li>
+                <li>Aumenta la autoconciencia</li>
+                <li>Promueve el bienestar emocional</li>
+            </ul>
+        </section>
+
+        <section id="tecnicas">
+            <h2>Técnicas de meditación</h2>
+            <div class="tecnica">
+                <h3>Meditación de atención plena</h3>
+                <p>Enfócate en tu respiración y observa tus pensamientos sin juzgarlos.</p>
+            </div>
+            <div class="tecnica">
+                <h3>Meditación de visualización</h3>
+                <p>Imagina un lugar tranquilo y sereno para relajar tu mente.</p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form>
+                <div class="input-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meditación Mindfulness. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto de aparición al hacer scroll
+        function checkScroll() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
